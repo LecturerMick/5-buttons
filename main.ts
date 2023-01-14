@@ -1,6 +1,18 @@
 OLED.init(128, 64)
 OLED.writeString("5 Button Test")
 basic.forever(function () {
+    if (input.buttonIsPressed(Button.A)) {
+        OLED.clear()
+        OLED.writeStringNewLine("A - Mainboard")
+    }
+    if (input.buttonIsPressed(Button.B)) {
+        OLED.clear()
+        OLED.writeStringNewLine("B - Mainboard")
+    }
+    if (input.buttonIsPressed(Button.B)) {
+        OLED.clear()
+        OLED.writeStringNewLine("A+B - Mainboard")
+    }
     if (tinkercademy.ADKeyboard(ADKeys.A, AnalogPin.P0)) {
         OLED.clear()
         OLED.writeStringNewLine("A")
